@@ -1,0 +1,154 @@
+@import url("./cores.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+body{
+    background: linear-gradient(45deg, var(--cor1), var(--cor3));
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+#header{
+    height: 10vh;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#header img{
+    width: 150px;
+    animation: animaLogo 2s forwards;
+}
+@keyframes animaLogo{
+    0%{
+       transform: scale(0);
+        
+    }
+}
+#header nav ul{
+    display: flex;
+    align-items: center;
+}
+#header nav ul li a{
+    color: #FFCC01;
+    padding: 0 10px;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: .5s;
+    cursor: pointer;
+}
+#header nav ul li a:hover{
+    color: #fff;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../img/ash.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 30%;
+}
+
+main img{
+    width: 20%;
+    position: absolute;
+    left: 10px;
+    top: 20vh;
+}
+main .sinop{
+    width: 600px;
+    background: #0004;
+    backdrop-filter: blur(10px);
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #fff4;
+}
+main .sinop h2{
+    color: #FFCC01;
+    text-shadow: 2px 2px 2px #2B75B4;
+    margin-bottom: 20px;
+}
+main .sinop p{
+    margin-bottom: 10px;
+    font-weight: 200;
+    font-size: .9rem;
+}
+footer{
+    height: 10vh;
+    color: #fff;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    color: #FFCC01;
+    text-shadow: 2px 2px 2px #2B75B4;
+
+}
+#mainModal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #0008;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+#modal{
+    width: 600px;
+    height: 90vh;
+    background: #fff;
+    margin: 5vh auto;
+    box-shadow: 0 0 20px #000,
+                0 0 10px var(--cor5);
+    border-radius: 10px;
+    overflow: hidden;
+    animation: animaModal .5s forwards;
+}
+@keyframes animaModal{
+    0%{
+        transform: translateY(-20px);
+    }
+}
+#modal header{
+    height: 10vh;
+    background: linear-gradient(45deg, var(--cor1), var(--cor3));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+#modal header ul{
+    display: flex;
+}
+#modal header ul li{
+    margin-right: 10px;
+}
+#modal header ul li a{
+    cursor: pointer;
+    color: #FFCC01;
+    text-shadow: 1px 1px 2px #2B75B4;
+}
+#modal header img{
+    width: 15px;
+    cursor: pointer;
+}
+#modal .modalmain{
+    height: 55vh;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+#modal .modalmain img{
+    max-width: 90%;
+    height: 90%;
+}
+#modal .modalfooter{
+    height: 25vh;
+    color: #fff;
+    padding: 10px;
+    background: linear-gradient(45deg, var(--cor1), var(--cor3));
+}
+#modal .modalfooter #tipo{
+    font-weight: 400;
+    font-size: 1rem;
+}
